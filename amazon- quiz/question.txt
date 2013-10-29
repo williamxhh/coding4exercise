@@ -1,0 +1,53 @@
+Question 2 / 2 (Amazon Campus£¨9£©: MM-Chess)
+
+There is an interesting game called MM-Chess. The size of the board is 1*N, every grid has a score (non-negative).  The first grid is the start and the Nth grid is the end. The game requires players to control the chess starting from the starting point to the end.
+
+There're four types of cards in the game and the total number is M. Each type of card are labeled one integer number in [1,4]. After using a card with number x on it, the chess will move x steps forward. Each time, player will choose one unused card to move the chess forward, and each card can only be used once. In the game, the chess gains the score at the starting point automatically.  When the chess arrives at a new grid, it also gets the score on that point. The goal of the game is to get the most score.
+
+Input:
+
+                The first line contains two integers N (the size of board) and M (the number of the cards).
+
+                The second line contains N integers, meaning the scores on the the board (the i-th integer corresponds to the score on the i-th grid).
+
+                The third line contains M integers, meaning the numbers on the M cards.
+
+                The sum of the number of M cards equals to N-1.
+
+                You can assume that 1 <= N <= 350, 1 <= M <= 120, and that the number of cards are less than 40 for each kind.
+
+Output:
+
+                One integer. The most score that player can get.
+
+ 
+
+Sample Input 1
+
+4 2
+
+1 2 1 2
+
+1 2
+
+Sample Output 1
+
+5
+
+Given two cards with number 1 and number 2 each, we have two choices: path one is 1 -> 2 -> 2, path two is 1 -> 1 -> 2. The maximum score is 5, which is the output.
+
+ 
+
+Sample Input 2
+
+5 3
+
+1 2 1 2 1
+
+1 2 1
+
+Sample Output 2
+
+6
+
+Given three cards (one can move 2 steps, two can move 1 steps), we have three choices: path one is 1 -> 2 -> 1 -> 1, path two is 1 -> 2 -> 2 -> 1, path three is 1 -> 1 -> 2 -> 1. The maximum score is 6, which is the output.
